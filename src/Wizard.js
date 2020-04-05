@@ -16,14 +16,15 @@ class Wizard extends React.Component {
   }
 
   componentDidMount() {
-    const { tree, first, middleware = [], noFirst = false } = this.props;
+    const { tree, first, currentStep, middleware = [], noFirst = false } = this.props;
+    
     const treeKeys = Object.keys(tree);
     isKeyInList(treeKeys, first, "First Step Missing from Tree List!");
     if(!(typeof middleware === 'function' || (Array.isArray(middleware) && (middleware.length === 0 || middleware.every(mwFunc => typeof mwFunc === 'function' ))))){
       error('Unknown Middleware. Did you pass in a function or array of functions?')
     }
     if(!noFirst){
-      doMiddleware(middleware, first, this.setStep, tree)
+      doMiddleware(middleware, first, this.setStep, currentStep, tree)
     }
     this.setState({ step: first, treeKeys, tree });
   }
@@ -33,11 +34,13 @@ class Wizard extends React.Component {
   };
 
   render() {
-    const { children, middleware } = this.props;
+    const { children, middleware, currentStep } = this.props;
+
     return (
       <WizardContext.Provider
         value={{
           ...this.state,
+          //step: currentStep || this.state.step,
           middleware,
           setStep: this.setStep,
         }}

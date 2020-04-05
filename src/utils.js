@@ -9,12 +9,12 @@ export const isKeyInList = (list, key, msg) => {
   }
 };
 
-export const doMiddleware = (middleware, step, setStep, tree) => {
+export const doMiddleware = (middleware, step, setStep, nextStep, tree) => {
     if(typeof middleware === 'function'){
-      middleware(step, setStep, tree)
+      middleware(step, setStep, nextStep, tree)
     } 
     else if(Array.isArray(middleware)){
-      middleware.forEach( mwFunction => mwFunction(step, setStep, tree))
+      middleware.forEach( mwFunction => mwFunction(step, setStep, nextStep, tree))
     }
     else{
       error('Unknown Middleware')
@@ -30,7 +30,7 @@ export const getControls = (tree, step, treeKeys = [], setStep = () => null, mid
   if (typeof to === "string") {
     isKeyInList(treeKeys, to);
     return { ...agg, [to]: () => {
-      doMiddleware(middleware, step, setStep, tree)
+      doMiddleware(middleware, step, setStep, to, tree)
       setStep(to)
     } };
   } else if (typeof to === "object") {

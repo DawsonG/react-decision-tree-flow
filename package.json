@@ -21,7 +21,8 @@
   "repository": "https://github.com/rjerue/react-decision-tree-flow",
   "homepage": "https://rjerue.github.io/react-decision-tree-flow",
   "peerDependencies": {
-    "react": "^16.7.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -31,10 +32,8 @@
     "@storybook/react": "^5.0.0",
     "@storybook/storybook-deployer": "^2.8.1",
     "babel-loader": "^8.0.5",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
     "react-markdown": "^4.0.6",
-    "react-scripts": "2.1.5",
+    "react-scripts": "^3.4.1",
     "rollup": "^1.4.1",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.1",
