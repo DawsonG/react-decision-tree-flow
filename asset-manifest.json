@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/react-decision-tree-flow/main.5d0130080d579686586f.bundle.js",
+    "main.js.map": "/react-decision-tree-flow/main.5d0130080d579686586f.bundle.js.map",
+    "runtime~main.js": "/react-decision-tree-flow/runtime~main.5d0130080d579686586f.bundle.js",
+    "runtime~main.js.map": "/react-decision-tree-flow/runtime~main.5d0130080d579686586f.bundle.js.map",
+    "vendors~main.js": "/react-decision-tree-flow/vendors~main.5d0130080d579686586f.bundle.js",
+    "vendors~main.js.map": "/react-decision-tree-flow/vendors~main.5d0130080d579686586f.bundle.js.map",
+    "iframe.html": "/react-decision-tree-flow/iframe.html",
+    "precache-manifest.7fad319d0c8187bc1b1759287f57b549.js": "/react-decision-tree-flow/precache-manifest.7fad319d0c8187bc1b1759287f57b549.js",
+    "service-worker.js": "/react-decision-tree-flow/service-worker.js",
+    "vendors~main.5d0130080d579686586f.bundle.js.LICENSE.txt": "/react-decision-tree-flow/vendors~main.5d0130080d579686586f.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.5d0130080d579686586f.bundle.js",
+    "vendors~main.5d0130080d579686586f.bundle.js",
+    "main.5d0130080d579686586f.bundle.js"
+  ]
+}
