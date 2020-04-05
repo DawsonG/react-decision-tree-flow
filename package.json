@@ -18,7 +18,7 @@
   ],
   "private": false,
   "entry": "index.js",
-  "repository": "https://github.com/rjerue/react-decision-tree-flow",
+  "repository": "https://github.com/DawsonG/react-decision-tree-flow",
   "homepage": "https://rjerue.github.io/react-decision-tree-flow",
   "peerDependencies": {
     "react": "^16.13.1",
@@ -48,7 +48,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "prepublishOnly": "npm run release",
     "prepare": "npm run release",
-    "release": "npm run build:dev && npm run build:prod && npm run deploy-storybook",
+    "release": "npm run build:dev && npm run build:prod",
     "build:prod": "NODE_ENV=production rollup -c",
     "build:dev": "NODE_ENV=development rollup -c",
     "deploy-storybook": "storybook-to-ghpages"
